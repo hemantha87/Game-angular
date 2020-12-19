@@ -1,0 +1,11 @@
+<div *ngFor="let row of tiles;let i = index" class="row">
+	<div *ngFor="let tile of row; let j = index" class="flip-card">
+		<div class="flip-card-inner" (click)="flip(i,j,card)" #card>
+			<div class="flip-card-front"></div>
+			<div class="flip-card-back">
+				<img [src]="tile?.img" style="width:100%; height:100%"
+        [alt]="tile.faceValue">
+            </div>
+			</div>
+		</div>
+	</div>
